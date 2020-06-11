@@ -184,7 +184,7 @@ public class Module1_Tests {
         assertTrue("Task 6: There should be 1 annotation, `@Autowired`, on the `DatabaseLoader` constructor.", annotations.length == 1);
 
         assertEquals("Task 6: The method `findByTitleContaining()` doesn't have the `@RestResource` annotation.", RestResource.class, annotations[0].annotationType());
-        
+
         boolean contains_title_present = annotations[0].toString().replaceAll("/s", "").contains("rel=\"contains-title\"") ||
                 annotations[0].toString().replaceAll("/s", "").contains("rel=contains-title");
         boolean containsTitle_present = annotations[0].toString().replaceAll("/s", "").contains("path=\"containsTitle\"") ||
